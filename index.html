@@ -4,20 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ORITON | Altamira Guitars Deutschland</title>
+<title>ORITON | Altamira Guitars</title>
 
-<meta name="description" content="ORITON – Authorized Distributor of Altamira Guitars for DACH and Benelux. Stuttgart, Germany.">
+<meta name="description"
+      content="ORITON – Authorized Distributor for DACH and Benelux. Altamira Guitars. Stuttgart, Germany.">
 
 <style>
+
 :root {
     --cream: #f3ead8;
-    --cream-light: #faf6ed;
     --brown: #35180c;
-    --brown-light: #542a16;
+    --brown-dark: #241007;
     --gold: #b58a4b;
-    --text: #24160f;
-    --white: #fffaf0;
+    --paper: #faf6ed;
+    --ink: #21150f;
 }
+
+/* =========================
+   BASIC
+========================= */
 
 * {
     box-sizing: border-box;
@@ -30,9 +35,9 @@ html {
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    color: var(--text);
     background: var(--cream);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
     line-height: 1.7;
 }
 
@@ -41,34 +46,46 @@ a {
     text-decoration: none;
 }
 
-/* ---------- NAVIGATION ---------- */
 
-nav {
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
     position: fixed;
+    z-index: 50;
+
     top: 0;
     left: 0;
+
     width: 100%;
-    z-index: 100;
-    padding: 18px 6%;
+    height: 64px;
+
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+
     background: rgba(243, 234, 216, 0.94);
+
+    border-bottom: 1px solid rgba(53, 24, 12, 0.14);
+
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(53, 24, 12, 0.12);
 }
 
-.nav-logo {
-    font-size: 28px;
+.nav-brand {
+    font-size: 20px;
     letter-spacing: 5px;
-    font-weight: normal;
 }
 
 .nav-links {
     display: flex;
     gap: 32px;
-    font-size: 14px;
-    letter-spacing: 1.5px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
@@ -76,449 +93,449 @@ nav {
     color: var(--gold);
 }
 
-/* ---------- HERO ---------- */
+
+/* =========================
+   HERO
+   ORIGINAL BUSINESS CARD
+========================= */
 
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 120px 8% 80px;
+    padding-top: 64px;
+
     background: var(--cream);
 }
 
-.hero-content {
-    max-width: 720px;
-    position: relative;
-    z-index: 2;
+.hero-art {
+    display: block;
+
+    width: 100%;
+    height: auto;
 }
 
-.brand {
-    font-size: clamp(70px, 12vw, 150px);
-    line-height: 0.9;
-    letter-spacing: 8px;
-    font-weight: normal;
-}
 
-.tagline {
-    margin-top: 25px;
-    font-size: 15px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-}
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
-.hero-line {
-    width: 90px;
-    height: 1px;
-    background: var(--gold);
-    margin: 38px 0;
-}
-
-.hero-subtitle {
-    font-size: 20px;
-    max-width: 560px;
-}
-
-.distributor {
-    margin-top: 30px;
-    font-size: 15px;
-    letter-spacing: 1px;
-}
-
-.distributor strong {
-    font-size: 20px;
-}
-
-/* Decorative guitar rosette */
-
-.rosette {
-    position: absolute;
-    right: -210px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 650px;
-    height: 650px;
-    border-radius: 50%;
-    border: 20px solid var(--brown);
-    box-shadow:
-        inset 0 0 0 12px var(--gold),
-        inset 0 0 0 28px var(--brown),
-        inset 0 0 0 42px var(--gold),
-        inset 0 0 0 56px var(--brown-light);
-}
-
-.rosette::before {
-    content: "";
-    position: absolute;
-    inset: 75px;
-    border-radius: 50%;
-    border: 8px solid var(--gold);
-    background:
-        repeating-conic-gradient(
-            from 0deg,
-            var(--brown-light) 0deg 8deg,
-            var(--gold) 8deg 16deg
-        );
-}
-
-.rosette::after {
-    content: "";
-    position: absolute;
-    inset: 170px;
-    border-radius: 50%;
-    background: var(--brown);
-    border: 12px solid var(--gold);
-}
-
-/* ---------- SECTIONS ---------- */
-
-section {
+.section {
     padding: 110px 8%;
 }
 
-.section-title {
-    font-size: 48px;
-    font-weight: normal;
-    margin-bottom: 25px;
+.inner {
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
-.section-title span {
+.kicker {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--gold);
+
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    font-weight: 400;
+
+    letter-spacing: -1px;
+}
+
+.title em {
+    font-style: normal;
+
     color: var(--gold);
 }
 
-.section-intro {
-    max-width: 680px;
+.lead {
+    max-width: 720px;
+
+    margin-top: 28px;
+
     font-size: 19px;
 }
 
-/* ---------- ALTAMIRA ---------- */
+
+/* =========================
+   ALTAMIRA
+========================= */
 
 .altamira {
     background: var(--brown);
-    color: var(--white);
-    position: relative;
-    overflow: hidden;
-}
 
-.altamira-inner {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.altamira .section-title {
-    color: var(--white);
-}
-
-.altamira .section-title span {
-    color: #d1aa6a;
+    color: #fff8eb;
 }
 
 .altamira-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+
+    gap: 80px;
+
     align-items: center;
+
     margin-top: 60px;
 }
 
 .altamira-card {
-    padding: 45px;
-    border: 1px solid rgba(255,255,255,0.25);
+    border-top: 1px solid #c7a363;
+
+    border-bottom: 1px solid rgba(255, 248, 235, 0.25);
+
+    padding: 38px 0;
 }
 
 .altamira-name {
-    font-size: 58px;
+    font-size: clamp(48px, 6vw, 78px);
+
     font-style: italic;
+
+    line-height: 1;
+
     margin-bottom: 25px;
 }
 
-.altamira p {
-    color: rgba(255,250,240,0.85);
+.altamira-copy {
+    color: rgba(255, 248, 235, 0.82);
+
+    font-size: 18px;
 }
 
-.badge {
-    margin-top: 30px;
+.distributor {
     display: inline-block;
-    border-left: 2px solid #d1aa6a;
+
+    margin-top: 30px;
+
     padding-left: 18px;
-    letter-spacing: 2px;
-    font-size: 14px;
+
+    border-left: 2px solid #c7a363;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
     text-transform: uppercase;
 }
 
-.rosette-small {
-    width: 330px;
-    height: 330px;
-    border-radius: 50%;
+
+/* =========================
+   DECORATIVE ROSETTE
+========================= */
+
+.rosette {
+    width: min(390px, 80vw);
+
+    aspect-ratio: 1;
+
     margin: auto;
+
+    border-radius: 50%;
+
     background:
         repeating-conic-gradient(
-            var(--brown-light) 0deg 7deg,
+            from 0deg,
+            #43200e 0deg 7deg,
             #a9793d 7deg 14deg,
             #d5b579 14deg 21deg
         );
+
     border: 18px solid #241007;
+
     box-shadow:
         inset 0 0 0 12px #d0a763,
-        inset 0 0 0 26px #43200e;
+        inset 0 0 0 27px #43200e;
+
     position: relative;
 }
 
-.rosette-small::after {
+.rosette::after {
     content: "";
+
     position: absolute;
-    width: 125px;
-    height: 125px;
-    background: var(--brown);
-    border-radius: 50%;
-    top: 50%;
+
+    width: 37%;
+    height: 37%;
+
     left: 50%;
+    top: 50%;
+
     transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background: var(--brown);
+
     border: 8px solid #d0a763;
 }
 
-/* ---------- ABOUT ---------- */
+
+/* =========================
+   ABOUT
+========================= */
 
 .about {
-    background: var(--cream-light);
-}
-
-.about-inner {
-    max-width: 1100px;
-    margin: auto;
+    background: var(--paper);
 }
 
 .about-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    margin-top: 55px;
+
+    gap: 60px;
+
+    margin-top: 60px;
 }
 
 .about-box {
-    padding: 35px 0;
+    padding-top: 25px;
+
     border-top: 1px solid var(--gold);
 }
 
 .about-box h3 {
     font-size: 25px;
-    font-weight: normal;
+
+    font-weight: 400;
+
     margin-bottom: 12px;
 }
 
-/* ---------- CONTACT ---------- */
+
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
-    background: var(--brown);
-    color: var(--white);
-}
+    background: var(--brown-dark);
 
-.contact-inner {
-    max-width: 1000px;
-    margin: auto;
+    color: #fff8eb;
+
     text-align: center;
 }
 
-.contact .section-title {
-    color: var(--white);
+.contact .title {
+    color: #fff8eb;
 }
 
-.contact-text {
-    font-size: 19px;
-    margin-bottom: 45px;
-    color: rgba(255,250,240,0.82);
+.contact .lead {
+    margin-left: auto;
+    margin-right: auto;
+
+    color: rgba(255, 248, 235, 0.8);
 }
 
-.contact-links {
+.contact-buttons {
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
-    gap: 18px;
+
+    gap: 16px;
+
+    margin-top: 38px;
 }
 
-.contact-button {
-    padding: 15px 28px;
-    border: 1px solid #c9a263;
-    color: var(--white);
-    transition: 0.25s;
+.button {
+    border: 1px solid #c7a363;
+
+    padding: 13px 25px;
+
     letter-spacing: 1px;
+
+    transition: 0.2s ease;
 }
 
-.contact-button:hover {
-    background: #c9a263;
-    color: var(--brown);
+.button:hover {
+    background: #c7a363;
+
+    color: var(--brown-dark);
 }
 
 .founder {
     margin-top: 65px;
-    font-size: 17px;
 }
 
 .founder-name {
     font-size: 34px;
-    margin-bottom: 5px;
 }
 
-.founder-title {
-    font-style: italic;
+.founder-role {
     color: #d1aa6a;
+
+    font-style: italic;
 }
 
-/* ---------- FOOTER ---------- */
 
-footer {
-    background: #241007;
-    color: rgba(255,250,240,0.7);
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #180b05;
+
+    color: rgba(255, 248, 235, 0.65);
+
     text-align: center;
-    padding: 35px 20px;
-    font-size: 13px;
+
+    padding: 30px 20px;
+
+    font-size: 12px;
+
     letter-spacing: 1px;
 }
 
 .footer-links {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .footer-links a {
-    margin: 0 10px;
+    margin: 0 9px;
 }
 
-/* ---------- MOBILE ---------- */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 800px) {
 
-    nav {
-        padding: 15px 5%;
+    .nav {
+        height: 58px;
+
+        padding: 0 5%;
     }
 
-    .nav-links {
-        gap: 12px;
-        font-size: 11px;
-    }
+    .nav-brand {
+        font-size: 17px;
 
-    .nav-logo {
-        font-size: 22px;
-        letter-spacing: 3px;
-    }
-
-    .hero {
-        padding: 130px 7% 80px;
-        min-height: 90vh;
-    }
-
-    .brand {
-        font-size: 65px;
         letter-spacing: 4px;
     }
 
-    .tagline {
-        font-size: 11px;
-        letter-spacing: 3px;
+    .nav-links {
+        gap: 13px;
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
     }
 
-    .hero-subtitle {
-        font-size: 17px;
+    .hero {
+        padding-top: 58px;
     }
 
-    .rosette {
-        width: 430px;
-        height: 430px;
-        right: -250px;
-        opacity: 0.75;
-    }
-
-    section {
-        padding: 80px 7%;
-    }
-
-    .section-title {
-        font-size: 38px;
+    .section {
+        padding: 78px 7%;
     }
 
     .altamira-grid,
     .about-grid {
         grid-template-columns: 1fr;
+
         gap: 45px;
     }
 
-    .rosette-small {
-        width: 250px;
-        height: 250px;
-    }
-
-    .altamira-card {
-        padding: 30px;
-    }
-
-    .altamira-name {
-        font-size: 44px;
+    .lead {
+        font-size: 17px;
     }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
 
-<nav>
-    <div class="nav-logo">ORITON</div>
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="nav">
+
+    <a class="nav-brand" href="#top">
+        ORITON
+    </a>
 
     <div class="nav-links">
-        <a href="#about">Über uns</a>
-        <a href="#altamira">Altamira</a>
-        <a href="#contact">Kontakt</a>
+
+        <a href="#about">
+            Über uns
+        </a>
+
+        <a href="#altamira">
+            Altamira
+        </a>
+
+        <a href="#contact">
+            Kontakt
+        </a>
+
     </div>
+
 </nav>
 
 
-<!-- HERO -->
 
-<header class="hero">
+<main id="top">
 
-    <div class="hero-content">
 
-        <div class="brand">ORITON</div>
+<!-- =========================
+     HERO
+     ORIGINAL BUSINESS CARD
+========================= -->
 
-        <div class="tagline">
-            When Origin Finds Its Sound
+<section class="hero" aria-label="ORITON">
+
+    <img
+        class="hero-art"
+        src="oriton-card-front.png"
+        alt="ORITON – When Origin Finds Its Sound – Authorized Distributor for DACH and Benelux"
+    >
+
+</section>
+
+
+
+<!-- =========================
+     ALTAMIRA
+========================= -->
+
+<section
+    class="section altamira"
+    id="altamira"
+>
+
+    <div class="inner">
+
+        <div class="kicker">
+            Authorized Distributor
         </div>
 
-        <div class="hero-line"></div>
+        <h1 class="title">
+            Altamira <em>Guitars</em>
+        </h1>
 
-        <div class="hero-subtitle">
-            Gitarren mit Charakter, Herkunft und Klang.
-        </div>
+        <p class="lead">
 
-        <div class="distributor">
-            <strong>Altamira Guitars</strong><br>
-            Authorized Distributor for DACH and Benelux
-        </div>
+            ORITON ist Authorized Distributor
+            für Altamira Guitars in der DACH-Region
+            und den Benelux-Ländern.
 
-    </div>
-
-    <div class="rosette"></div>
-
-</header>
-
-
-<!-- ALTAMIRA -->
-
-<section class="altamira" id="altamira">
-
-    <div class="altamira-inner">
-
-        <h2 class="section-title">
-            Altamira <span>Guitars</span>
-        </h2>
-
-        <p class="section-intro">
-            ORITON ist Authorized Distributor für Altamira Guitars
-            in der DACH-Region und den Benelux-Ländern.
         </p>
 
+
         <div class="altamira-grid">
+
 
             <div class="altamira-card">
 
@@ -526,19 +543,36 @@ footer {
                     Altamira
                 </div>
 
-                <p>
-                    Tradition, Handwerk und der Charakter eines Instruments
-                    stehen im Mittelpunkt unserer Arbeit.
+                <p class="altamira-copy">
+
+                    Gitarren mit Charakter,
+                    Herkunft und Klang.
+
+                    Entdecken Sie Altamira Guitars
+                    und kontaktieren Sie uns für weitere
+                    Informationen zu Modellen und
+                    Verfügbarkeit.
+
                 </p>
 
-                <div class="badge">
-                    Authorized Distributor<br>
+
+                <div class="distributor">
+
+                    Authorized Distributor
+                    <br>
+
                     DACH &amp; Benelux
+
                 </div>
 
             </div>
 
-            <div class="rosette-small"></div>
+
+            <div
+                class="rosette"
+                aria-hidden="true"
+            ></div>
+
 
         </div>
 
@@ -547,41 +581,73 @@ footer {
 </section>
 
 
-<!-- ABOUT -->
 
-<section class="about" id="about">
+<!-- =========================
+     ABOUT
+========================= -->
 
-    <div class="about-inner">
+<section
+    class="section about"
+    id="about"
+>
 
-        <h2 class="section-title">
-            Über <span>ORITON</span>
+    <div class="inner">
+
+        <div class="kicker">
+            ORITON
+        </div>
+
+
+        <h2 class="title">
+
+            When Origin
+            <em>Finds Its Sound</em>
+
         </h2>
 
-        <p class="section-intro">
-            ORITON steht für die Verbindung von Herkunft und Klang.
-            Unser Fokus liegt auf dem internationalen Handel mit Gitarren
-            und insbesondere auf der Distribution von Altamira Guitars.
+
+        <p class="lead">
+
+            ORITON steht für den internationalen
+            Handel mit Gitarren und die Distribution
+            von Altamira Guitars.
+
         </p>
+
 
         <div class="about-grid">
 
+
             <div class="about-box">
-                <h3>Unsere Philosophie</h3>
+
+                <h3>
+                    Unsere Philosophie
+                </h3>
 
                 <p>
-                    When Origin Finds Its Sound.
-                    Wir verbinden authentische Instrumente mit Menschen,
-                    die ihren eigenen Klang suchen.
+
+                    Authentische Instrumente,
+                    traditionelles Handwerk und
+                    ein charaktervoller Klang
+                    stehen im Mittelpunkt.
+
                 </p>
+
             </div>
 
+
             <div class="about-box">
-                <h3>Unser Standort</h3>
+
+                <h3>
+                    Standort
+                </h3>
 
                 <p>
                     Stuttgart, Germany
                 </p>
+
             </div>
+
 
         </div>
 
@@ -590,34 +656,62 @@ footer {
 </section>
 
 
-<!-- CONTACT -->
 
-<section class="contact" id="contact">
+<!-- =========================
+     CONTACT
+========================= -->
 
-    <div class="contact-inner">
+<section
+    class="section contact"
+    id="contact"
+>
 
-        <h2 class="section-title">
+    <div class="inner">
+
+        <div class="kicker">
             Kontakt
+        </div>
+
+
+        <h2 class="title">
+
+            Sprechen Sie
+            <em>mit uns</em>
+
         </h2>
 
-        <p class="contact-text">
-            Sie möchten mehr über ORITON oder Altamira Guitars erfahren?
+
+        <p class="lead">
+
+            Sie möchten mehr über ORITON
+            oder Altamira Guitars erfahren?
+
             Wir freuen uns auf Ihre Anfrage.
+
         </p>
 
-        <div class="contact-links">
 
-            <a class="contact-button"
-               href="mailto:info@oriton.de">
-                E-Mail
+        <div class="contact-buttons">
+
+
+            <a
+                class="button"
+                href="mailto:info@oriton.de"
+            >
+                info@oriton.de
             </a>
 
-            <a class="contact-button"
-               href="tel:+4915227752947">
+
+            <a
+                class="button"
+                href="tel:+4915227752947"
+            >
                 +49 152 2775 2947
             </a>
 
+
         </div>
+
 
         <div class="founder">
 
@@ -625,7 +719,7 @@ footer {
                 Lady Jin
             </div>
 
-            <div class="founder-title">
+            <div class="founder-role">
                 Founder
             </div>
 
@@ -636,20 +730,35 @@ footer {
 </section>
 
 
-<!-- FOOTER -->
+</main>
 
-<footer>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
 
     <div>
         © 2026 ORITON. All rights reserved.
     </div>
 
+
     <div class="footer-links">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
+
+        <a href="#">
+            Impressum
+        </a>
+
+        <a href="#">
+            Datenschutz
+        </a>
+
     </div>
 
 </footer>
+
 
 </body>
 </html>
