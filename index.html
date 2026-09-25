@@ -98,20 +98,29 @@ a {
    HERO
    ORIGINAL BUSINESS CARD
 ========================= */
-
 .hero {
     padding-top: 64px;
-
     background: var(--cream);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 720px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .hero-art {
     display: block;
 
     width: 100%;
-    height: auto;
-}
+    max-width: 1400px;
 
+    height: auto;
+
+    object-fit: contain;
+}
 
 /* =========================
    GENERAL SECTIONS
